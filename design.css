@@ -1,0 +1,40 @@
+.navigation
+{
+    display: flex;
+}
+
+#logo
+{
+    padding-top: 10px;
+    margin-left: 50px;
+}
+
+.menus
+{
+    align-self: center;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.menu
+{
+    all: unset;
+    margin: 20px;
+    padding: 10px;
+    height: 50px;
+}
+
+.contents
+{
+    padding: 30px;
+    border: solid black 1px;
+    text-align: center;
+}
+
+.content
+{
+    padding: 100px;
+    border: solid black 1px;
+    height: 50px;
+    text-align: center;
+}
