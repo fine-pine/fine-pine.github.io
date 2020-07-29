@@ -7,9 +7,12 @@
 </head>
 <body>
     <div class="navigation">
-        <h1 id="logo">태 봉 정 밀</h1>
+        <header id="logo">
+            <h1>태 봉 정 밀</h1>
+            <img id="logoImg"src="images/logo.png">
+        </header>
 
-        <div class="menus">
+        <nav class="menus">
             <button class="menu">
                 About
             </button>
@@ -19,22 +22,28 @@
             <button class="menu">
                 Contact
             </button>
-        </div>
+        </nav>
     </div>
-    <div class="contents">
-        <div class="content" id="about">
-            About
-        </div>
-        <div class="content" id="work">
+
+    <main class="contents">
+        <section class="content" id="about">
+            <img id="machinesImg" src="images/machines.jpg">
+            <h1> About </h1>
+            <p class="text" id="text1"> Paragraph </p>
+        </section>
+        <section class="content" id="work">
             What to Do
-        </div>
-        <div class="content" id="contact">
+            <p class="text" id="text2"> Paragraph </p>
+        </section>
+        <section class="content" id="contact">
             Contact
-        </div>
-        <div class="content" id="Location">
+            <p class="text" id="text3"> Paragraph </p>
+        </section>
+        <section class="content" id="Location">
             Location
-        </div>
-    </div>
+            <p class="text" id="text4"> Paragraph </p>
+        </section>
+    </main>
     <script src="functions.js"></script>
 </body>
 </html>

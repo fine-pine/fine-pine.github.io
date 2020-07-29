@@ -1,12 +1,28 @@
+body
+{
+    margin: unset;
+}
+
 .navigation
 {
     display: flex;
+    background: white;
+    width: 100vw;
 }
 
 #logo
 {
-    padding-top: 10px;
     margin-left: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+#logoImg
+{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
 }
 
 .menus
@@ -26,15 +42,31 @@
 
 .contents
 {
-    padding: 30px;
-    border: solid black 1px;
-    text-align: center;
+    width: 100vw;
 }
 
 .content
 {
-    padding: 100px;
     border: solid black 1px;
-    height: 50px;
-    text-align: center;
+    padding: 200px;
+}
+
+.text
+{
+    display: block;
+    backdrop-color: white;
+}
+
+#machinesImg
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#work
+{
+    background: white;
 }
