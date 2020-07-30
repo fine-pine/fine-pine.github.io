@@ -111,7 +111,7 @@ h1, p
 .toDo
 {
     border: solid white 1px;
-    background: #012032;
+    background: #292C2B;
     border-radius: 10px;
     width: 200px;
     height: 200px;
@@ -129,7 +129,7 @@ h1, p
 #location-form
 {
     position: relative;
-    background-color: #012032;
+    background-color: #292C2B;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     width: 800px;
     height: 500px;
