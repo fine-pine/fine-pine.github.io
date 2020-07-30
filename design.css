@@ -47,15 +47,14 @@ body
 
 .content
 {
-    border: solid black 1px;
     width: 100%;
 }
 
-#machinesImg
+#frontImg
 {
     position: absolute;
-    top:0px;
-    left:0px;
+    bottom: 0px;
+    left: 0px;
     width: 100%;
     opacity: 0.7;
     z-index: -1;
@@ -64,8 +63,17 @@ body
 #about
 {
     height: 500px;
-    background: black;
-    color: white;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+#about p
+{
+    width: 700px;
+    font-size: 24px;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #work
@@ -74,9 +82,14 @@ body
     height: 400px;
 }
 
+h1, p
+{
+    text-align: center;
+}
+
 #contact
 {
-    margin-top: 100px;
+    margin-top: 300px;
     background: white;
     height: 400px;
 }
