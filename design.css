@@ -90,11 +90,11 @@ h1, p
     text-align: center;
 }
 
-#contact
+#location
 {
     padding-top: 300px;
     background: white;
-    height: 400px;
+    margin-bottom: 100px;
 }
 
 .slider
@@ -139,8 +139,11 @@ h1, p
 
 .btn
 {
-    width: 20px;
-    height: 20px;
+    display: unset;
+    border: unset;
+    background: unset;
+    width: 40px;
+    height: 400px;
 }
 
 .lB
@@ -187,8 +190,7 @@ h1, p
     align-content: center;
 }
 
-#location-form
-{
+#contact-form {
     position: relative;
     background-color: #292C2B;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -198,3 +200,17 @@ h1, p
     margin-right: auto;
     z-index: -1;
 }
+
+#map
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height:400px;
+}
+
+.customoverlay {position:relative;bottom:65px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
+.customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+.customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: black;background: black url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
+.customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
+.customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
