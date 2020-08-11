@@ -1,93 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title> 태봉정밀 </title>
+    <title>태 봉 정 밀</title>
     <link rel="stylesheet" href="design.css">
 </head>
 <body>
-    <div class="navigation">
-        <header id="logo">
-            <h1>태 봉 정 밀</h1>
-            <img id="logoImg"src="images/logo.png">
-        </header>
-
-        <nav class="menus">
-            <button class="menu">
-                About
-            </button>
-            <button class="menu">
-                Work
-            </button>
-            <button class="menu">
-                Contact
-            </button>
-        </nav>
-    </div>
-
-    <main class="contents">
-        <section class="content" id="about">
-            <img id="frontImg" src="images/ant-rozetsky-SLIFI67jv5k-unsplash.jpg">
-            <h1 id="aboutHeader" style="font-size: 50px;"> About </h1>
-            <p class="text" id="text1"> 태봉정밀은 40년의 Know-How 와 프레스 금형의 우수한 기술로 브레이크 패드를 한 공정에 제조하여 수출역군에 일조하고 열정과 안정으로 내실을 다져 화합과 미래 기술 개발에 온 힘을 다해 200여가지의 차종 패드를 생산하고있는 유망한 업체 입니다.</p>
-        </section>
-        <section class="content" id="work">
-            <h1 style="font-size: 50px;"> What to do </h1>
-            <p class="text" id="text2"> Paragraph </p>
-            <div class="slider">
-                <button class="btn lB"><</button>
-                <div class="toDos">
-                    <div class="toDoList f1">
-                        <div class="toDo toDoTop">
-                            <img class="toDoImg toDoTop"id="toDo1Img" src="공장/금형.jpg">
-                        </div>
-                        <div class="toDo toDoBottom toDoText"> 금형 </div>
-                    </div>
-                    <dev class="toDoList f2">
-                        <div class="toDo toDoTop toDoText"> 배달 </div>
-                        <div class="toDo toDoBottom">
-                            <img class="toDoImg toDoBottom"id="toDo2Img" src="공장/트럭.jpg">
-                        </div>
-                    </dev>
-                    <div class="toDoList f3">
-                        <div class="toDo toDoTop">
-                            <img class="toDoImg toDoTop"id="toDo3Img" src="공장/철판들.jpg">
-                        </div>
-                        <div class="toDo toDoBottom toDoText"> 철판 </div>
-                    </div>
-                    <div class="toDoList f4">
-                        <div class="toDo toDoTop toDoText"> 제품 </div>
-                        <div class="toDo toDoBottom">
-                            <img class="toDoImg toDoBottom"id="toDo4Img" src="공장/제품들.jpg">
-                        </div>
-                    </div>
-                    <div class="toDoList f5">
-                        <div class="toDo toDoTop">
-                            <img class="toDoImg toDoTop"id="toDo5Img" src="공장/제품들.jpg">
-                        </div>
-                        <div class="toDo toDoBottom toDoText"></div>
-                    </div>
-                    <div class="toDoList f6">
-                        <div class="toDo toDoTop toDoText"></div>
-                        <div class="toDo toDoBottom">
-                            <img class="toDoImg toDoBottom"id="toDo6Img" src="공장/제품들.jpg">
-                        </div>
-                    </div>
-                </div>
-                <button class="btn rB">></button>
-            </div>
-        </section>
-        <section class="content" id="location">
-            <h1 style="font-size: 50px;"> Location </h1>
-            <div id="map"></div>
-        </section>
-        <section class="content" id="contact">
-            <h1 style="font-size: 50px;"> Contact </h1>
-            <p class="text" id="text4"> Paragraph </p>
-            <div id="contact-form"></div>
-        </section>
-    </main>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=01a0079b4b7553403f61223544d95176"></script>
-    <script src="functions.js"></script>
+ <nav>
+     <div class="logo">
+         <h1 class="logo-text">
+             태봉정밀
+         </h1>
+         <img class="logo-img" src="./images/logo.png"/>
+     </div>
+     <ul class="menus">
+         <li class="menu">
+            ABOUT
+         </li>
+         <li class="menu">
+            HISTORY
+         </li>
+         <li class="menu">
+            CONTACT
+         </li>
+     </ul>
+ </nav>
+ <section>
+     <div class="imgs img-1"></div>
+     <div class="texts text-1"> Professional </div>
+ </section>
+ <section>
+     <div class="imgs img-2"></div>
+     <div class="texts text-2"> Performance </div>
+ </section>
+ <section>
+     <div class="imgs img-3"></div>
+     <div class="texts text-3"> Safety </div>
+ </section>
+ <div class="slider">
+     <button class="btns" style="margin-right: 50px"><</button>
+     <div class="container">
+         <img class="pics pic1" src="./images/logo.png"/>
+         <img class="pics pic2" src="./images/logo.png"/>
+         <img class="pics pic3" src="./images/logo.png"/>
+         <img class="pics pic4" src="./images/logo.png"/>
+         <img class="pics pic5" src="./images/logo.png"/>
+     </div>
+     <button class="btns" style="margin-left: 50px">></button>
+ </div>
+ <section>
+     <div class="map-text">Location</div>
+     <div class="map"></div>
+ </section>
+ <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=01a0079b4b7553403f61223544d95176"></script>
+ <script src="functions.js"></script>
 </body>
 </html>
