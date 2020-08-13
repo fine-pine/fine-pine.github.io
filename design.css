@@ -33,7 +33,7 @@ nav {
 
 .menu {
     list-style: none;
-    padding: 8px 12px;
+    padding: 8px 20px;
 }
 
 .imgs {
@@ -45,8 +45,7 @@ nav {
 }
 
 section {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
 }
 
 .img-1 {
@@ -59,32 +58,29 @@ section {
     url("./images/ant-rozetsky-SLIFI67jv5k-unsplash.jpg");
 }
 
-.img-3 {
-    background-image: linear-gradient( #011126, transparent, #011126),
-    url("./images/pop-zebra-wp81DxKUd1E-unsplash.jpg");
-    opacity: 80%;
+.text-container{
+    width: 80%;
+    position: relative;
+    top: -400px;
+    left: 150px;
 }
 
-.texts {
-    display: inline;
-    position: relative;
-    top: -300px;
-    left: 150px;
+.semititles {
     font-size: 44px;
     opacity: 85%;
 }
 
-.map {
-    width: 70%;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
+.dash{
+    width: 300px;
+    height: 8px;
+    background-color: #C52A2F;
+    opacity: 85%;
+    margin: 20px 0px;
 }
 
-.map-text {
-    text-align: center;
-    font-size: 44px;
-    padding-bottom: 20px;
+.texts{
+    width: 600px;
+    font-size: 22px;
 }
 
 .slider{
@@ -93,6 +89,7 @@ section {
     height: 400px;
     align-items: center;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .btns{
@@ -108,16 +105,83 @@ section {
     display: flex;
     flex-direction: row;
     width: 800px;
+    overflow: hidden;
 }
 
 .pics{
-    flex-basis: auto;
     width: 600px;
     height: 400px;
 }
 
+.int-container{
+    justify-content: center;
+}
 
-.customoverlay {position:relative;bottom:45px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
+.dash2{
+    width: 100px;
+    height: 8px;
+    background-color: #C52A2F;
+    opacity: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.int-title{
+    text-align: center;
+    font-size: 44px;
+    opacity: 85%;
+    margin-bottom: 50px;
+}
+
+.intros{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro{
+    margin: 10px;
+    border-radius: 30px;
+    width: 240px;
+    height: 240px;
+    background-color: #414B5B;
+}
+
+.ct-container{
+    margin-top: 100px;
+}
+
+.map-text{
+    margin-top: 100px;
+}
+
+.map {
+    width: 70%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-text {
+    margin: 0;
+    text-align: center;
+    font-size: 44px;
+    padding-bottom: 50px;
+}
+
+.contact{
+    width: 70%;
+    height: 500px;
+    background: #414B5B;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.customoverlay {position:relative;bottom:65px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
 .customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
 .customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: black;background: black url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
 .customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
