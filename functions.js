@@ -41,3 +41,57 @@ var customOverlay = new kakao.maps.CustomOverlay({
     content: content,
     yAnchor: 1
 });
+
+//Slider
+
+const pics = document.querySelectorAll('.pics'),
+    lb = document.querySelector(".LB"),
+    rb = document.querySelector(".RB");
+
+function handleLC(event){
+    event.preventDefault();
+    pics.forEach( pic => {
+        if( Number(pic.style.order) === pics.length){
+            pic.style.order = 1;
+        }
+        else if(Number(pic.style.order) === 2|| Number(pic.style.order) === 4){
+            pic.style.order = Number(pic.style.order)+1;
+            pic.classList.remove( pic.className.split(" ")[1]);
+        }
+        else if(Number(pic.style.order) === 1|| Number(pic.style.order) === 3){
+            pic.style.order = Number(pic.style.order)+1;
+            pic.classList.add("nearby");
+        }
+        else{
+            pic.style.order = Number(pic.style.order)+1;
+        }
+    })
+}
+
+function handleRC(event){
+    event.preventDefault();
+    pics.forEach( pic => {
+        if( Number(pic.style.order) === 1){
+            pic.style.order = pics.length;
+        }
+        else if(Number(pic.style.order) === 2|| Number(pic.style.order) === 4){
+            pic.style.order = Number(pic.style.order)-1;
+            pic.classList.remove( pic.className.split(" ")[1]);
+        }
+        else if(Number(pic.style.order) === 3|| Number(pic.style.order) === 5){
+            pic.style.order = Number(pic.style.order)-1;
+            pic.classList.add("nearby");
+        }
+        else{
+            pic.style.order = Number(pic.style.order)-1;
+        }
+    })
+}
+
+function init() {
+    lb.addEventListener("click", handleLC);
+    rb.addEventListener("click", handleRC);
+}
+
+init();
+

@@ -62,7 +62,7 @@ section {
     width: 80%;
     position: relative;
     top: -400px;
-    left: 150px;
+    left: 15%;
 }
 
 .semititles {
@@ -71,7 +71,7 @@ section {
 }
 
 .dash{
-    width: 300px;
+    width: 270px;
     height: 8px;
     background-color: #C52A2F;
     opacity: 85%;
@@ -83,13 +83,22 @@ section {
     font-size: 22px;
 }
 
-.slider{
+.slides{
     display: flex;
-    width: 100%;
+    justify-content: center;
+}
+
+.semiti-3{
+    text-align: center;
+}
+
+.slider{
+    width: 800px;
     height: 400px;
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+    overflow: hidden;
 }
 
 .btns{
@@ -99,18 +108,27 @@ section {
     font-size: 44px;
     text-align: center;
     background-image: linear-gradient(90deg, transparent, #011126, transparent);
+    cursor: pointer;
 }
 
 .container{
     display: flex;
-    flex-direction: row;
-    width: 800px;
-    overflow: hidden;
+    position: relative;
+    left: -1100px;
+    width: 10000px;
+    z-index: -1;
 }
 
 .pics{
+    border-radius: 20px;
     width: 600px;
     height: 400px;
+    transition: 1s ease-in-out;
+}
+
+.nearby {
+    transform: scale(0.8);
+    background-image: linear-gradient(90deg, transparent, #011126 10%, #011126 90%, transparent);
 }
 
 .int-container{
@@ -149,6 +167,20 @@ section {
     width: 240px;
     height: 240px;
     background-color: #414B5B;
+    text-align: center;
+}
+
+.intro img{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.intro .int-semiti{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .ct-container{
@@ -175,14 +207,100 @@ section {
 
 .contact{
     width: 70%;
-    height: 500px;
     background: #414B5B;
     margin-left: auto;
     margin-right: auto;
+    opacity: 85%;
+}
+
+.info-title{
+    width: 90%;
+    padding: 40px 0px 50px 50px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.infos{
+    display: flex;
+    justify-content: center;
+}
+
+.info{
+    width: 45%;
+    height: max-content;
+    padding: 10px;
+}
+
+.info-add, .info-con{
+    margin: 0px 20px 10px 20px;
+}
+
+.info-con{
+    margin-top: 20px;
+}
+
+.info-ti{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.send-email{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    display: block;
+    all : unset;
+    background-color: #011126;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input::placeholder{
+    font-size: 14px;
+    padding: 10px;
+    color: white;
+}
+
+.name, .email{
+    height: 30px;
+}
+
+.message{
+    height: 100px;
+}
+
+.send{
+    all: unset;
+    margin-right: 10px;
+    place-self: flex-end;
+    width: fit-content;
+    font-size: 14px;
+    opacity: 85%;
+}
+
+footer{
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    font-size: 14px;
+    justify-content: space-around;
+}
+
+footer div{
+    color: #011126;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+footer div span{
+    margin: 0px 10px;
 }
 
 .customoverlay {position:relative;bottom:65px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
 .customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
-.customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: black;background: black url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
+.customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #C52A2F;background: #C52A2F url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
 .customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
 .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
