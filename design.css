@@ -6,12 +6,13 @@ body {
 
 nav {
     display: flex;
-    padding: 30px 30px 50px 50px;
-    justify-content: space-between;
 }
 
 .logo{
     display: flex;
+    position: relative;
+    top: 40px;
+    left: 100px;
     align-items: center;
 }
 
@@ -25,15 +26,106 @@ nav {
     height: 44px;
 }
 
+.bar{
+    font-size: 24px;
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    display: none;
+    z-index: -1;
+    opacity: 0;
+}
+
+.bar:hover{
+    border: 1px solid white;
+}
+
 .menus {
+    position: fixed;
     display: flex;
-    margin-top: 12px;
-    margin-left: 0px;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    z-index: 10;
+    background-color: #011126;
 }
 
 .menu {
     list-style: none;
+    display: inline-block;
     padding: 8px 20px;
+    margin: 0px 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.menu__logo{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.menu-img{
+    margin: 0px 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.menu__container{
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+@media (max-width: 768px){
+    nav{
+        flex-direction: column;
+    }
+
+    .logo-text, .logo-img{
+        display: none;
+    }
+
+    .logo{
+        padding: 100px 0px;
+        box-sizing: border-box;
+        width: 50%;
+    }
+
+    .menus {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu__container{
+        margin: 0;
+        width: 90%;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .menu__logo{
+        display: flex;
+    }
+
+    .bar{
+        display: block;
+        opacity: 1;
+        z-index: 11;
+    }
+}
+
+.none{
+    display: none;
+}
+
+.menu:hover{
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #010C17;
 }
 
 .imgs {
@@ -49,13 +141,14 @@ section {
 }
 
 .img-1 {
-    background-image: linear-gradient(#011126, transparent, #011126),
+    background-image: linear-gradient(#011126, transparent 20%, transparent 80% , #011126),
     url("./images/ali-morshedlou-WMD64tMfc4k-unsplash.jpg");
 }
 
 .img-2 {
-    background-image: linear-gradient( #011126, transparent, #011126),
+    background-image: linear-gradient( #011126, transparent 20%, transparent 80% , #011126),
     url("./images/ant-rozetsky-SLIFI67jv5k-unsplash.jpg");
+    opacity: 80%;
 }
 
 .text-container{
@@ -79,7 +172,7 @@ section {
 }
 
 .texts{
-    width: 600px;
+    width: 80%;
     font-size: 22px;
 }
 
@@ -123,7 +216,7 @@ section {
     border-radius: 20px;
     width: 600px;
     height: 400px;
-    transition: 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .nearby {
@@ -250,25 +343,30 @@ section {
     flex-direction: column;
 }
 
-input{
+input, textarea{
     display: block;
     all : unset;
+    font-size: 14px;
     background-color: #011126;
     margin-bottom: 10px;
-    width: 100%;
+    width: 95%;
+    opacity: 85%;
 }
 
-input::placeholder{
+input::placeholder, textarea::placeholder{
     font-size: 14px;
-    padding: 10px;
     color: white;
 }
 
-.name, .email{
+.name{
     height: 30px;
+    font-size: 14px;
+    padding: 0px 10px;
 }
 
 .message{
+    font-size: 14px;
+    padding: 5px 10px;
     height: 100px;
 }
 
@@ -279,6 +377,7 @@ input::placeholder{
     width: fit-content;
     font-size: 14px;
     opacity: 85%;
+    cursor: pointer;
 }
 
 footer{

@@ -88,10 +88,54 @@ function handleRC(event){
     })
 }
 
+// sending email
+
+const name = document.querySelector(".name"),
+    message = document.querySelector(".message"),
+    sendBtn = document.querySelector(".send");
+
+function sendEmail(event){
+    event.preventDefault();
+    window.open(`mailto:myf8335@naver.com?subject=${ "From Web: "+ name.value}&body=${message.value}`);
+}
+
+// Auto Scrolling
+
+const navbar = document.querySelector('.menus');
+
+function handleMenu(event){
+    event.preventDefault();
+    const link = event.target.dataset.link;
+    if(link == null){
+        return;
+    }
+    const scrollTo = document.querySelector(link);
+    scrollTo.scrollIntoView({ block: "center", inline: "center", behavior: "smooth"});
+}
+
+// hamburger
+
+const burger = document.querySelector('.bar'),
+    menus = document.querySelector('.menu__container');
+
+function handleburger(event){
+    event.preventDefault();
+    console.log(event);
+    if(menus.classList[1] === 'none'){
+        menus.classList.remove('none');
+    }else {
+        menus.classList.add('none');
+    }
+}
+
+// init
+
 function init() {
     lb.addEventListener("click", handleLC);
     rb.addEventListener("click", handleRC);
+    sendBtn.addEventListener("click", sendEmail);
+    navbar.addEventListener("click", handleMenu);
+    burger.addEventListener("click", handleburger);
 }
 
 init();
-

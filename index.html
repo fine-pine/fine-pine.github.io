@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>태 봉 정 밀</title>
     <link rel="stylesheet" href="design.css">
+    <meta name="description" content="Introduction of TaeBong Factory">
+    <meta name="author" content="Song Mok Lee">
+    <link rel="icon" type="image/png" href="./images/logo.png" />
 </head>
 <body>
  <nav>
@@ -14,21 +17,30 @@
          <img class="logo-img" src="./images/logo.png"/>
      </div>
      <ul class="menus">
-         <li class="menu">
-             INTRO
-         </li>
-         <li class="menu">
-             GALLERY
-         </li>
-         <li class="menu">
-             ABOUT
-         </li>
-         <li class="menu">
-             CONTACT
-         </li>
+         <i class="fas fa-bars bar"></i>
+         <div class="menu__logo">
+             <h2 class="manu-text">
+                 태봉정밀
+             </h2>
+             <img class="menu-img" src="./images/logo.png"/>
+         </div>
+         <div class="menu__container none">
+             <li class="menu" data-link="#intro">
+                 INTRO
+             </li>
+             <li class="menu" data-link="#gallery">
+                 GALLERY
+             </li>
+             <li class="menu" data-link="#about">
+                 ABOUT
+             </li>
+             <li class="menu" data-link="#contact">
+                 CONTACT
+             </li>
+         </div>
      </ul>
  </nav>
- <section>
+ <section id="intro">
      <div class="imgs img-1"></div>
      <div class="text-container">
          <div class="semititles semiti-1"> Professional </div>
@@ -45,23 +57,23 @@
      </div>
  </section>
  <div class="dash2"></div>
- <div class="semititles semiti-3"> Gallery </div>
+ <div class="semititles semiti-3" id="gallery"> Gallery </div>
  <section class="slides">
      <button class="btns LB"><</button>
      <div class="slider">
          <div class="container">
-             <img class="pics" src="./공장/철판들.jpg" style="order: 1; background-color: red"/>
-             <img class="pics nearby" src="./공장/트럭.jpg" style="order: 2; background-color: yellow"/>
-             <img class="pics" src="./공장/제품들.jpg" style="order: 3; background-color: green"/>
-             <img class="pics nearby" src="./공장/금형.jpg" style="order: 4; background-color: blue"/>
-             <img class="pics" src="./공장/front.jpg" style="order: 5; background-color: purple"/>
+             <img class="pics" src="./공장/제품들.jpg" style="order: 1;"/>
+             <img class="pics nearby" src="./공장/트럭.jpg" style="order: 2;"/>
+             <img class="pics" src="./공장/철판들.jpg" style="order: 3;"/>
+             <img class="pics nearby" src="./공장/금형.jpg" style="order: 4;"/>
+             <img class="pics" src="./공장/front.jpg" style="order: 5;"/>
          </div>
      </div>
      <button class="btns RB">></button>
  </section>
  <section class="int-container">
      <div class="dash2"></div>
-     <div class="int-title">About</div>
+     <div class="int-title" id="about">About</div>
      <div class="intros">
          <div class="intro">
              <img src="./images/infrastructure.png"/>
@@ -80,7 +92,7 @@
          </div>
          <div class="intro">
              <img src="./images/logo.png"/>
-             <div class="int-semiti"> 안녕안녕안녕 </div>
+             <div class="int-semiti"> 익룡 날다. </div>
              <div>익룡하세요 Tlqkf.</div>
          </div>
          <div class="intro">
@@ -92,7 +104,7 @@
  </section>
  <section class="ct-container">
      <div class="dash2"></div>
-     <div class="map-text">Contact us</div>
+     <div class="map-text" id="contact">Contact us</div>
      <div class="map"></div>
      <div class="contact">
          <div class="info-title">Information</div>
@@ -112,8 +124,7 @@
                  </div>
                  <div class="info send-email">
                      <input type="text" placeholder="Name"  class="name"/>
-                     <input type="text" placeholder="Email"  class="email"/>
-                     <input type="text" placeholder="Message"  class="message"/>
+                     <textarea type="text" placeholder="Message"  class="message"></textarea>
                      <button class="send">Send</button>
                  </div>
              </div>
@@ -125,5 +136,6 @@
  </section>
  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=01a0079b4b7553403f61223544d95176"></script>
  <script src="functions.js"></script>
+ <script src="https://kit.fontawesome.com/9bf4efd52c.js" crossorigin="anonymous"></script>
 </body>
 </html>
