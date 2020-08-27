@@ -1,3 +1,7 @@
+'use strict';
+
+/* Map */
+
 var container = document.querySelector(".map"); //지도를 담을 영역의 DOM 레퍼런스
 
 var options = { //지도를 생성할 때 필요한 기본 옵션
@@ -42,66 +46,48 @@ var customOverlay = new kakao.maps.CustomOverlay({
     yAnchor: 1
 });
 
-//Slider
 
-const pics = document.querySelectorAll('.pics'),
-    lb = document.querySelector(".LB"),
-    rb = document.querySelector(".RB");
+/* Slider */
+const SHOWING_CLASS = "showing";
+const firstSlide = document.querySelector(".slider__item:first-child");
 
-function handleLC(event){
-    event.preventDefault();
-    pics.forEach( pic => {
-        if( Number(pic.style.order) === pics.length){
-            pic.style.order = 1;
+function slide() {
+    const currnetSlide = document.querySelector(`.${SHOWING_CLASS}`);
+
+    if (currnetSlide){
+        currnetSlide.classList.remove(SHOWING_CLASS);
+        const nextSlide = currnetSlide.nextElementSibling;
+        if( nextSlide) {
+            nextSlide.classList.add(SHOWING_CLASS);
+        } else {
+            firstSlide.classList.add(SHOWING_CLASS);
         }
-        else if(Number(pic.style.order) === 2|| Number(pic.style.order) === 4){
-            pic.style.order = Number(pic.style.order)+1;
-            pic.classList.remove( pic.className.split(" ")[1]);
-        }
-        else if(Number(pic.style.order) === 1|| Number(pic.style.order) === 3){
-            pic.style.order = Number(pic.style.order)+1;
-            pic.classList.add("nearby");
-        }
-        else{
-            pic.style.order = Number(pic.style.order)+1;
-        }
-    })
+    } else {
+        firstSlide.classList.add(SHOWING_CLASS);
+    }
 }
 
-function handleRC(event){
-    event.preventDefault();
-    pics.forEach( pic => {
-        if( Number(pic.style.order) === 1){
-            pic.style.order = pics.length;
-        }
-        else if(Number(pic.style.order) === 2|| Number(pic.style.order) === 4){
-            pic.style.order = Number(pic.style.order)-1;
-            pic.classList.remove( pic.className.split(" ")[1]);
-        }
-        else if(Number(pic.style.order) === 3|| Number(pic.style.order) === 5){
-            pic.style.order = Number(pic.style.order)-1;
-            pic.classList.add("nearby");
-        }
-        else{
-            pic.style.order = Number(pic.style.order)-1;
-        }
-    })
-}
+slide()
+setInterval(slide, 3000);
 
-// sending email
+/* Mail */
 
-const name = document.querySelector(".name"),
-    message = document.querySelector(".message"),
-    sendBtn = document.querySelector(".send");
+const name = document.querySelector(".contact__email__name"),
+    message = document.querySelector(".contact__email__message"),
+    send = document.querySelector(".contact__email__send");
 
 function sendEmail(event){
     event.preventDefault();
     window.open(`mailto:myf8335@naver.com?subject=${ "From Web: "+ name.value}&body=${message.value}`);
 }
 
-// Auto Scrolling
+send.addEventListener("click", sendEmail);
 
-const navbar = document.querySelector('.menus');
+
+/* AutoScroll */
+
+const nav = document.querySelector('#nav'),
+    navMenu = document.querySelector('.nav__menu');
 
 function handleMenu(event){
     event.preventDefault();
@@ -110,32 +96,33 @@ function handleMenu(event){
         return;
     }
     const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ block: "center", inline: "center", behavior: "smooth"});
+    scrollTo.scrollIntoView({behavior: "smooth"});
 }
 
-// hamburger
+nav.addEventListener("click", handleMenu);
 
-const burger = document.querySelector('.bar'),
-    menus = document.querySelector('.menu__container');
 
-function handleburger(event){
-    event.preventDefault();
-    console.log(event);
-    if(menus.classList[1] === 'none'){
-        menus.classList.remove('none');
-    }else {
-        menus.classList.add('none');
+// Show Arrow up Button when scrolling down
+
+const intro = document.querySelector('#intro');
+const introHeight = intro.getBoundingClientRect().height;
+const arrowUp = document.querySelector('.arrow-up');
+
+document.addEventListener('scroll', () => {
+    if (window.scrollY > introHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
     }
-}
+});
 
-// init
+arrowUp.addEventListener("click", () => {
+    intro.scrollIntoView({behavior: "smooth"});
+});
 
-function init() {
-    lb.addEventListener("click", handleLC);
-    rb.addEventListener("click", handleRC);
-    sendBtn.addEventListener("click", sendEmail);
-    navbar.addEventListener("click", handleMenu);
-    burger.addEventListener("click", handleburger);
-}
+// navbar toggle button for small screen
 
-init();
+const navBtn = document.querySelector('.nav__toggle-btn');
+navBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+});

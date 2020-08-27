@@ -1,141 +1,170 @@
 <!doctype html>
+
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <title>태 봉 정 밀</title>
-    <link rel="stylesheet" href="design.css">
+    <meta charset="UTF-8" />
+
+    <title> 태봉정밀 </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Introduction of TaeBong Factory">
     <meta name="author" content="Song Mok Lee">
+
     <link rel="icon" type="image/png" href="./images/logo.png" />
+    <link rel="stylesheet" href="design.css" />
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=01a0079b4b7553403f61223544d95176"></script>
+    <script src="functions.js" defer></script>
+    <script src="https://kit.fontawesome.com/9bf4efd52c.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
- <nav>
-     <div class="logo">
-         <h1 class="logo-text">
-             태봉정밀
-         </h1>
-         <img class="logo-img" src="./images/logo.png"/>
+
+<!-- Navbar -->
+
+ <nav id="nav">
+
+     <div class="nav__logo">
+         <img src="./images/logo.png"/>
+         <a href="">태봉정밀</a>
      </div>
-     <ul class="menus">
-         <i class="fas fa-bars bar"></i>
-         <div class="menu__logo">
-             <h2 class="manu-text">
-                 태봉정밀
-             </h2>
-             <img class="menu-img" src="./images/logo.png"/>
-         </div>
-         <div class="menu__container">
-             <li class="menu" data-link="#intro">
-                 INTRO
-             </li>
-             <li class="menu" data-link="#gallery">
-                 GALLERY
-             </li>
-             <li class="menu" data-link="#about">
-                 ABOUT
-             </li>
-             <li class="menu" data-link="#contact">
-                 CONTACT
-             </li>
-         </div>
+
+     <ul class="nav__menu">
+         <li class="nav__menu__item active" data-link="#intro">Intro</li>
+         <li class="nav__menu__item" data-link="#about">About</li>
+         <li class="nav__menu__item" data-link="#gallery">Gallery</li>
+         <li class="nav__menu__item" data-link="#contact">Contact</li>
      </ul>
+
+     <button class="nav__toggle-btn">
+         <i class="fas fa-bars"></i>
+     </button>
+
  </nav>
+
+<!-- Intro -->
+
  <section id="intro">
-     <div class="imgs img-1"></div>
-     <div class="text-container">
-         <div class="semititles semiti-1"> Professional </div>
-         <div class="dash"></div>
-         <div class="texts text-1"> 40년의 Know-How, 그리고 신뢰 </div>
-     </div>
- </section>
- <section>
-     <div class="imgs img-2"></div>
-     <div class="text-container">
-         <div class="semititles semiti-2"> Performance </div>
-         <div class="dash"></div>
-         <div class="texts text-2"> One-Step 처리 기술로 단번에 </div>
-     </div>
- </section>
- <div class="dash2"></div>
- <div class="semititles semiti-3" id="gallery"> Gallery </div>
- <section class="slides">
-     <button class="btns LB"><</button>
-     <div class="slider">
-         <div class="container">
-             <img class="pics" src="./공장/제품들.jpg" style="order: 1;"/>
-             <img class="pics nearby" src="./공장/트럭.jpg" style="order: 2;"/>
-             <img class="pics" src="./공장/철판들.jpg" style="order: 3;"/>
-             <img class="pics nearby" src="./공장/금형.jpg" style="order: 4;"/>
-             <img class="pics" src="./공장/front.jpg" style="order: 5;"/>
+
+     <div class="intro__item">
+         <div class="intro__img intro__img--pro"></div>
+         <div class="intro__texts">
+             <h1 class="intro__text__title"> Professional </h1>
+             <div class="intro__text__dash"></div>
+             <h3 class="intro__text__text"> 40년의 Know-How, 그리고 신뢰 </h3>
          </div>
      </div>
-     <button class="btns RB">></button>
+
+     <div class="intro__item">
+         <div class="intro__img intro__img--per"></div>
+         <div class="intro__texts">
+             <h1 class="intro__text__title"> Performance </h1>
+             <div class="intro__text__dash"></div>
+             <h3 class="intro__text__text"> One-Step 처리 기술로 단번에 </h3>
+         </div>
+     </div>
+
  </section>
- <section class="int-container">
-     <div class="dash2"></div>
-     <div class="int-title" id="about">About</div>
-     <div class="intros">
-         <div class="intro">
+
+<!-- About -->
+
+ <section class="about" id="about">
+
+     <div class="section__dash about__dash"></div>
+
+     <h1 class="section__title about__title">About</h1>
+
+     <div class="about__container">
+
+         <div class="about__item">
              <img src="./images/infrastructure.png"/>
-             <div class="int-semiti"> Lorem inpum </div>
-             <div>로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)</div>
+             <h2 class="about__item__title"> Lorem inpum </h2>
+             <h3 class="about__item__text">로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)</h3>
          </div>
-         <div class="intro">
-             <img src="./images/mind.png"/>
-             <div class="int-semiti"> 안녕안녕안녕 </div>
-             <div>안녕하세요 강녕하세요</div>
+         <div class="about__item">
+             <img src="./images/infrastructure.png"/>
+             <h2 class="about__item__title"> Lorem inpum </h2>
+             <h3 class="about__item__text">로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)</h3>
          </div>
-         <div class="intro">
-             <img src="./images/share.png"/>
-             <div class="int-semiti"> Lorem inpum </div>
-             <div>로렘 입숨(lorem ipsum</div>
+         <div class="about__item">
+             <img src="./images/infrastructure.png"/>
+             <h2 class="about__item__title"> Lorem inpum </h2>
+             <h3 class="about__item__text">로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)</h3>
          </div>
-         <div class="intro">
-             <img src="./images/logo.png"/>
-             <div class="int-semiti"> 익룡 날다. </div>
-             <div>익룡하세요 Tlqkf.</div>
+         <div class="about__item">
+             <img src="./images/infrastructure.png"/>
+             <h2 class="about__item__title"> Lorem inpum </h2>
+             <h3 class="about__item__text">로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)</h3>
          </div>
-         <div class="intro">
-             <img src="./images/chat.png"/>
-             <div class="int-semiti"> Lorem inpum </div>
-             <div> lipsum)은 출판이나 그래픽 디자인 분야</div>
+         <div class="about__item">
+             <img src="./images/infrastructure.png"/>
+             <h2 class="about__item__title"> Lorem inpum </h2>
+             <h3 class="about__item__text">로렘 입숨(lorem ipsum; 줄여서 립숨, lipsum)</h3>
          </div>
+
      </div>
+
  </section>
- <section class="ct-container">
-     <div class="dash2"></div>
-     <div class="map-text" id="contact">Contact us</div>
+
+<!-- Gallery -->
+
+<section class="gallery" id="gallery">
+
+    <div class="section__dash gallery__dash"></div>
+
+    <h1 class="section__title gallery__title">Gallery</h1>
+
+    <div class="slider">
+        <div class="slider__item slider__item--1"></div>
+        <div class="slider__item slider__item--2"></div>
+        <div class="slider__item slider__item--3"></div>
+        <div class="slider__item slider__item--4"></div>
+        <div class="slider__item slider__item--5"></div>
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+ <section class="contact" id="contact">
+
+     <div class="section__dash contact__dash"></div>
+     <h1 class="section__title contact__title">Contact us</h1>
+
      <div class="map"></div>
-     <div class="contact">
-         <div class="info-title">Information</div>
-         <div>
-             <div class="infos">
-                 <div class="info">
-                     <div class="info-add">
-                         <div class="info-ti">Address</div>
-                         <div>경북 경산시 자인면 북사리 1085-6</div>
-                     </div>
-                     <div class="info-con">
-                         <div class="info-ti">Contact</div>
-                         <div style="margin: 5px 0px;">T. 053-354-8632</div>
-                         <div style="margin: 5px 0px;">F. 053-354-8633</div>
-                         <div style="margin: 5px 0px;">KaKao. USER_ID</div>
-                     </div>
+
+     <div class="contact__info">
+
+         <div class="contact__info__title">Information</div>
+
+         <div class="contact__info__container">
+             <div class="contact__infos">
+                 <div class="contact__info--address">
+                     <div class="info__title">Address</div>
+                     <div>경북 경산시 자인면 북사리 1085-6</div>
                  </div>
-                 <div class="info send-email">
-                     <input type="text" placeholder="Name"  class="name"/>
-                     <textarea type="text" placeholder="Message"  class="message"></textarea>
-                     <button class="send">Send</button>
+                 <div class="contact__info--contact">
+                     <div class="info__title">Contact</div>
+                     <div>T. 053-354-8632</div>
+                     <div>F. 053-354-8633</div>
+                     <div>KaKao. USER_ID</div>
                  </div>
              </div>
+             <div class="contact__email">
+                 <input type="text" placeholder="Name"  class="contact__email__name"/>
+                 <textarea type="text" placeholder="Message"  class="contact__email__message"></textarea>
+                 <button class="contact__email__send">Send</button>
+             </div>
          </div>
+
          <footer>
-             <div> 태봉정밀 <span>|</span> 이해성 <span>|</span> 사업자 번호. 504-02-88458 </div>
+             <div class="contact__footer__text"> 태봉정밀 <span>|</span> 이해성 <span>|</span> 사업자 번호. 504-02-88458 </div>
+             <p class="contact__footer__rights">2020 Is-Tree 태봉정밀 - All rights reserved</p>
          </footer>
+
      </div>
  </section>
- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=01a0079b4b7553403f61223544d95176"></script>
- <script src="functions.js"></script>
- <script src="https://kit.fontawesome.com/9bf4efd52c.js" crossorigin="anonymous"></script>
+<button class="arrow-up"><i class="fas fa-arrow-up"></i></button>
 </body>
 </html>
