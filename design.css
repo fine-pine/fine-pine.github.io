@@ -3,6 +3,7 @@
 :root {
     /* Color */
     --color-red: #C52A2F;
+    --color-dark-red: #621517;
     --color-black: #222222;
     --color-gray: #414B5B;
     --color-dark-blue: #011126;
@@ -207,18 +208,32 @@ p{
     margin: 10px;
     padding: 10px;
     border-radius: 20px;
-    background-color: #414B5B;
+    background-color: var(--color-gray);
     text-align: center;
 }
 
 .about__item>img{
-    margin-top: 10px;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+}
+
+.about__item__title{
+    position: relative;
+    bottom: 10px;
+}
+
+.about_item__sort{
+    position: relative;
+    bottom: 10px;
+    font-size: var(--font-micro);
+    color: var(--color-dark-blue);
 }
 
 .about__item__text{
-    font-size: var(--font-micro);
+    position: relative;
+    bottom: 10px;
+    margin-top: 5px;
+    font-size: var(--font-small);
     font-weight: var(--weight-regular);
 }
 
