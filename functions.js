@@ -48,27 +48,75 @@ var customOverlay = new kakao.maps.CustomOverlay({
 
 
 /* Slider */
+
 const SHOWING_CLASS = "showing";
+const CONTROL_CLASS = "showing-control";
+
+const controlContainer = document.querySelector(".slider__controls");
+
+const sliders = document.querySelectorAll(".slider__item");
+const controls = document.querySelectorAll(".slider__control");
+
 const firstSlide = document.querySelector(".slider__item:first-child");
+const firstControl = document.querySelector(".slider__control:first-child");
 
 function slide() {
-    const currnetSlide = document.querySelector(`.${SHOWING_CLASS}`);
+    const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
+    const currentControl = document.querySelector(`.${CONTROL_CLASS}`);
 
-    if (currnetSlide){
-        currnetSlide.classList.remove(SHOWING_CLASS);
-        const nextSlide = currnetSlide.nextElementSibling;
+    if (currentSlide){
+        currentSlide.classList.remove(SHOWING_CLASS);
+        currentControl.classList.remove(CONTROL_CLASS);
+
+        const nextSlide = currentSlide.nextElementSibling;
+        const nextControl = currentControl.nextElementSibling;
+
         if( nextSlide) {
             nextSlide.classList.add(SHOWING_CLASS);
+            nextControl.classList.add(CONTROL_CLASS);
         } else {
             firstSlide.classList.add(SHOWING_CLASS);
+            firstControl.classList.add(CONTROL_CLASS);
         }
+
     } else {
         firstSlide.classList.add(SHOWING_CLASS);
+        firstControl.classList.add(CONTROL_CLASS);
+    }
+}
+
+function handleControl(event) {
+    event.preventDefault();
+
+    const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
+    const currentControl = document.querySelector(`.${CONTROL_CLASS}`);
+
+    if (currentControl === event.target){
+        return;
+    } else {
+        const targetNumber = event.target.dataset.num;
+
+        sliders.forEach( slider => {
+            const sliderNumber =slider.dataset.num;
+
+            if( sliderNumber === targetNumber) {
+                currentSlide.classList.remove(SHOWING_CLASS);
+                currentControl.classList.remove(CONTROL_CLASS);
+                slider.classList.add(SHOWING_CLASS);
+                event.target.classList.add(CONTROL_CLASS);
+
+                clearInterval(Timer);
+                Timer = setInterval(slide, 3000);
+            }
+        });
     }
 }
 
 slide()
-setInterval(slide, 3000);
+let Timer;
+Timer = setInterval(slide, 3000);
+controlContainer.addEventListener("click", handleControl);
+
 
 /* Mail */
 

@@ -17,8 +17,8 @@
 
     /* Font weight */
     --weight-bold: 700;
-    --weight-semi-bold: 600;
-    --weight-regular: 400;
+    --weight-semi-bold: 500;
+    --weight-regular: 300;
 
     /* Border radius size */
 
@@ -34,6 +34,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 body {
@@ -201,11 +202,11 @@ p{
 }
 
 .about__item{
-    width: 240px;
-    height: 240px;
+    width: 250px;
+    height: 250px;
     margin: 10px;
     padding: 10px;
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: #414B5B;
     text-align: center;
 }
@@ -214,6 +215,11 @@ p{
     margin-top: 10px;
     width: 100px;
     height: 100px;
+}
+
+.about__item__text{
+    font-size: var(--font-micro);
+    font-weight: var(--weight-regular);
 }
 
 
@@ -227,6 +233,7 @@ p{
     width: 70%;
     height: 500px;
     position: relative;
+    margin: auto;
 }
 
 .slider__item{
@@ -237,14 +244,14 @@ p{
     align-items: center;
     position: absolute;
     top: 0;
-    left: 15vw;
     z-index: 0;
     opacity: 0;
     transition: all 1000ms ease-in-out;
     transform: scale(0.9);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
+    border-radius: 5px;
 }
 
 .slider__item--1{
@@ -263,6 +270,24 @@ p{
     background-image: url("공장/machines.jpg");
 }
 
+.slider__controls{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: var(--color-white);
+    font-size: 4px;
+    margin-top: 10px;
+}
+
+.slider__control{
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.showing-control{
+    opacity: 0.5;
+}
+
 .showing{
     opacity: 1;
     z-index: 1;
@@ -277,6 +302,8 @@ p{
     height: 400px;
     margin-left: auto;
     margin-right: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .contact__info{
