@@ -480,7 +480,7 @@ footer>*{
     }
 
     .about__container, .slider, .map, .contact__info {
-        width: 85%;
+        width: 90%;
     }
 
     .slider__controls{
