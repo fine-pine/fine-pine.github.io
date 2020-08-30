@@ -126,7 +126,7 @@ const name = document.querySelector(".contact__email__name"),
 
 function sendEmail(event){
     event.preventDefault();
-    window.open(`mailto:myf8335@naver.com?subject=${ "From Web: "+ name.value}&body=${message.value}`);
+    window.open(`mailto:taebong.public@gmail.com?subject=${ "From: "+ name.value}&body=${message.value}`);
 }
 
 send.addEventListener("click", sendEmail);
