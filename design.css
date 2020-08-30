@@ -292,7 +292,7 @@ p{
     justify-content: center;
     align-content: center;
     color: var(--color-white);
-    font-size: 4px;
+    font-size: 12px;
     margin-top: 10px;
 }
 
@@ -481,5 +481,14 @@ footer>*{
 
     .about__container, .slider, .map, .contact__info {
         width: 85%;
+    }
+
+    .slider__controls{
+        font-size: 16px;
+    }
+
+    .slider__control{
+        margin: 0px 8px;
+        cursor: pointer;
     }
 }
