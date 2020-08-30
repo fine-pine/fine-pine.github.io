@@ -483,6 +483,10 @@ footer>*{
         width: 90%;
     }
 
+    .slider__item {
+        height: 500px;
+    }
+
     .slider__controls{
         font-size: 16px;
     }
@@ -490,5 +494,9 @@ footer>*{
     .slider__control{
         margin: 0px 8px;
         cursor: pointer;
+    }
+
+    .map{
+        height: 300px;
     }
 }
