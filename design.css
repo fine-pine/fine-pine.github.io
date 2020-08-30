@@ -503,4 +503,8 @@ footer>*{
     .map{
         height: 300px;
     }
+
+    .arrow-up {
+        display: none;
+    }
 }
