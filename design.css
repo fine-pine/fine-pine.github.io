@@ -483,6 +483,10 @@ footer>*{
         width: 90%;
     }
 
+    .slider {
+        height: 400px;
+    }
+
     .slider__item {
         height: 400px;
     }
